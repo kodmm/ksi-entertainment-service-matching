@@ -30,6 +30,15 @@ uv run uvicorn app.main:app --reload
 
 `http://127.0.0.1:8000` で起動する。`GET /health` にアクセスして `{"status": "ok"}` が返れば起動確認できる。
 
+## Docker
+
+```bash
+docker build -t ksi-matching .
+docker run -p 8000:8000 ksi-matching
+```
+
+`http://127.0.0.1:8000/health` で `{"status": "ok"}` が返れば起動確認できる。
+
 ## エンドポイント
 
 現時点ではスキャフォールディングのみで、いずれも実装は最小限のプレースホルダー。
